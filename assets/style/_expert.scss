@@ -1,0 +1,149 @@
+.expert{
+        margin-bottom: 120px;
+        @media screen and (max-width:767px) {
+            margin-bottom: 60px;
+          }
+          @media screen and (max-width:367px) {
+            margin-bottom: 50px;
+          }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        padding: 60px;
+        background-color: $--black-silver;
+        border-radius: 20px;
+        @media screen and (max-width:767px) {
+            padding: 30px 20px;
+          }
+        &-top{
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           gap: 20px;
+           color: $--white;
+           margin-bottom: 40px;
+           @media screen and (max-width:425px) {
+            flex-direction: column;
+            
+           }
+           & h2{
+            margin-bottom: 0;
+           }
+        }
+        &-slider{
+            &-slide{
+                display: flex;
+                    flex-direction: column;
+                    max-width: 100%;
+                   background-color: $--white;
+                   border-radius: 20px;
+                   color: $--black-silver;
+                   padding: 20px;
+                   transition: .3s linear;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $--blue;
+                        color: $--white;
+                    }
+                    img{
+                       max-width: 100%;
+                        object-fit: cover;
+                        border-radius: 15px;
+                        margin-bottom: 20px;
+                    }
+                    &-text{
+                        & .time{
+                            display: inline-flex;
+                            padding: 5px 15px;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                            border-radius: 500px;
+                            background: $--white-blue;
+                            font-weight: 500;
+                            color: $--blue;
+                            margin-bottom: 10px;
+                        }
+                        
+                       & h3{
+                            display: -webkit-box;
+                            white-space: normal;
+                            text-transform: uppercase;
+                            overflow: hidden;
+                            -webkit-line-clamp: 2; 
+                            -webkit-box-orient: vertical;
+                            box-orient: vertical;
+                            text-overflow: ellipsis;
+                            white-space: normal; 
+                        }
+                       
+                     &-pos,
+                     &-edu{
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2; 
+                            -webkit-box-orient: vertical;
+                            box-orient: vertical;
+                            text-overflow: ellipsis;
+                            white-space: normal; 
+                            font-size: 14px;
+                            font-weight: 300;
+                            &:not(:nth-last-of-type(1)){
+                                margin-bottom: 5px;
+                            }
+                            &:nth-last-of-type(1){
+                                margin-bottom: 20px;
+                            }
+                        }
+                        &-pos{
+                            -webkit-line-clamp: 1; 
+                        }
+                        & .btn{
+                            max-width: 100%;
+                            width: 100%;
+                            margin-bottom: 5px;
+                        }
+                    }
+            }
+            .expert__container-slider-slide:hover > .expert__container-slider-slide-text .btn{
+                background: $--white;
+                color: $--blue;
+                border-color: $--blue;
+            }
+            .expert__container-slider-slide:hover > .expert__container-slider-slide-text .white-btn{
+                background: $--blue;
+                color: $--white;
+                border-color: $--white;
+            }
+          
+        }
+    }
+}
+.swiper-wrapper{
+    padding-bottom: 30px;
+    img{
+        max-width: 100%;
+        width: 100%;
+    }
+}
+.expert__container-top-arrows{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    max-width: 90px;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width:425px) {
+        max-width: 70px;
+    }
+}
+
+.expert-swiper-pagination {
+    width: 150px;
+    height: 10px;
+}
+
+.expert__container-top-arrow-next::after,
+.expert__container-top-arrow-prev::after{
+  content: none;
+}

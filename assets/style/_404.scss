@@ -1,0 +1,62 @@
+.error{
+    margin-bottom: 120px;
+    @media screen and (max-width:1023px) {
+        margin-bottom: 60px;
+    }
+    @media screen and (max-width:767px) {
+        margin-bottom: 50px;
+    }
+    &__container{
+        display: flex;
+        @media screen and (max-width:767px) {
+            flex-direction: column;
+        }
+        &-img{
+            padding: 60px 80px;
+            background-color: $--white;
+            border-radius: 20px;
+            border: 1px solid $--gray-line;
+            z-index: 1;
+            max-width: 750px;
+            width: 100%;
+            @media screen and (max-width:1023px) {
+                padding: 30px 40px;
+            }
+            @media screen and (max-width:767px) {
+                padding: 20px 10px;
+                max-width: 100%;
+            }
+        }
+        &-info{
+            display: flex;
+            flex-direction: column;
+            padding: 60px;
+            background-color: $--blue;
+            border-radius: 0 20px 20px 0px;
+            color: $--white;
+            margin-left: -20px;
+            z-index: 0;
+            justify-content: center;
+            max-width: 570px;
+            width: 100%;
+            @media screen and (max-width:1023px) {
+                padding: 30px;
+            }
+            @media screen and (max-width:767px) {
+                padding: 20px;
+                margin-left: 0px;
+                max-width: 100%;
+            }
+            & p{
+                text-wrap: balance;
+                max-width: 330px;
+                &:not(:nth-last-of-type(1)){
+                    margin-bottom: 10px;
+                }
+                &:nth-last-of-type(1){
+                  margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

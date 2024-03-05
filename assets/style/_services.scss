@@ -1,0 +1,52 @@
+.services{
+    
+    &__container{
+        color: $--white;
+        padding: 60px ;
+        background-color: $--blue;
+        border-radius: 20px;
+        margin-bottom: 40px;
+        @media screen and (max-width:1023px) {
+            padding: 30px;
+        }
+        @media screen and (max-width:767px) {
+            padding: 30px 20px;
+        }
+        &-wrap{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            @media screen and (max-width:1023px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media screen and (max-width:767px) {
+                display: flex;
+                flex-direction: column;
+            }
+            &-item{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                border-radius: 20px;
+                background: $--white;
+                color: $--black-silver;
+                gap: 5px;
+                & a{
+                    color: $--black-silver;
+                    font-size: 14px;
+                    text-decoration-line: underline;
+                    transition: .5s ease;
+                    @media (hover:hover) and (pointer:fine) {
+                        &:hover{
+                            color: $--blue;
+                        }
+                    }
+                    
+                }
+                &-top{
+                    @include blackBlue;
+                }
+            }
+        }
+    }
+}

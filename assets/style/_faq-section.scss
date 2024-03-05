@@ -1,0 +1,132 @@
+.faq{
+  margin-bottom: 120px;
+  @media screen and (max-width:767px) {
+    margin-bottom: 60px;
+    
+  }
+  @media screen and (max-width:367px) {
+    margin-bottom: 50px;
+  }
+    &__container{
+        &-accord {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+           
+            &-item {
+                max-width: 100%;
+                width: 100%;
+                border-top: 1px solid $--gray-line;
+                background-color: $--white;
+                padding: 30px;
+                border-radius: 10px;
+                
+                cursor: pointer;
+                transition:all .3s linear;
+                @media screen and (max-width:767px) {
+                  padding: 20px;
+                }
+                @media screen and (max-width:360px) {
+                  padding: 10px;
+                }
+                &:nth-last-of-type(1){
+                    border-bottom: 1px solid $--gray-line;
+                }
+                &-top {
+                    max-width: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    justify-content: space-between;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    @media screen and (max-width:767px) {
+                      gap: 20px;
+                      @include adaptive-value('font-size',14, 20, 1330);
+
+                    }
+                    @media screen and (max-width:367px) {
+                      gap: 20px;
+                      word-wrap: break-word;
+                        overflow-wrap: break-word;
+                        white-space: normal; 
+                        white-space: pre-wrap;
+                    }
+                    & p{
+                        word-wrap: break-word;
+                        overflow-wrap: break-word;
+                        white-space: normal; 
+                        white-space: pre-wrap;
+                        @media screen and (max-width:367px) {
+                          overflow-wrap: anywhere;
+                        }
+                    }
+             & svg{
+            max-width: 36px;
+            max-height: 36px;
+            width: 100%;
+            height: 100%;
+            
+            margin-right: 5px;
+            transition: all .3s linear;
+             }
+                    
+                  }
+                &-bottom {
+                    // display: none;
+                    opacity: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: all .3s linear;
+                    padding: 0px 30px 0px 0px;
+                    
+                  }
+                 
+              }
+              .faq__container-accord-item:hover,
+              .faq__container-accord-item.active {
+                background-color: $--blue;
+                color: $--white;
+                transition: .3s ease;
+              }
+              .faq__container-accord-item.active .faq__container-accord-item-bottom {
+                background-color: $--blue;
+                opacity: 1;
+                max-height: 100vh;
+                overflow: visible;
+                padding: 30px 30px 0 0 ;
+                @media screen and (max-width:767px) {
+                  padding: 20px 0 0 0;
+                }
+                @media screen and (max-width:367px) {
+                  padding: 10px 0 0 0;
+                }
+
+              }
+              .faq__container-accord-item:hover .faq__container-accord-item-top ,
+              .faq__container-accord-item.active  .faq__container-accord-item-top  {
+                background-color: $--blue;
+                transition: .3s ease;
+                border-color: transparent;
+                color: $--white;
+              }
+             
+              .faq__container-accord-item:hover .faq__container-accord-item-top svg path,
+              .faq__container-accord-item:hover .faq__container-accord-item-top svg circle,
+                .faq__container-accord-item.active  .faq__container-accord-item-top svg path,
+                .faq__container-accord-item.active  .faq__container-accord-item-top svg circle  
+                   {
+                stroke: $--white;
+                
+              }
+              .faq__container-accord-item.active  .faq__container-accord-item-top svg {
+            transform: rotate(45deg);
+              }
+    
+          }
+    }
+}

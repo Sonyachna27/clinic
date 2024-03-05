@@ -1,0 +1,93 @@
+.footer{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &-top{
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            border-radius: 20px;
+            border: 1px solid $--gray-line;
+            background: $--white;
+            padding: 60px;
+            align-items: center;
+            background-color: $--white;
+            @media screen and (max-width:767px) {
+                gap: 30px;
+                padding: 10px;
+            }
+            &-wrap{
+                display: flex;
+                gap: 50px;
+                @media screen and (max-width:1023px) {
+                    gap: 35px;
+                }
+                @media screen and (max-width:767px) {
+                    gap: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &-item{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    max-width: 195px;
+                    @media screen and (max-width:1023px) {
+                        max-width: 100%;
+                        align-items: center;
+                        text-align: center;
+                    }
+                    & a {
+                       color:#A0A0A0;
+
+                    &:hover{
+                        color: $--blue;
+                    }
+                    @media screen and (max-width:1023px) {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                    }
+                    & span{
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        text-transform: uppercase;
+                    }
+                    
+                   
+                }
+            }
+        }
+        &-copy{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            border-radius: 15px;
+            border: 1px solid $--gray-line;
+            background: $--white;
+            padding: 30px 40px;
+            background-color: $--white;
+            color:  #A0A0A0;
+            @media screen and (max-width:767px) {
+               flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            & a{
+                transition: .3s linear;
+                @media (hover:hover) and (pointer:fine) {
+                    &:hover{
+                        color: $--blue;
+                    }
+                }
+            }
+        }
+    }
+}
