@@ -2049,7 +2049,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 367px) {
+@media screen and (max-width: 550px) {
   .gallery__container-wrap-content {
     display: flex;
     flex-direction: column;
@@ -2592,6 +2592,7 @@ header {
   .doctors__container {
     flex-direction: column;
     display: flex;
+    padding: 20px;
   }
 }
 .doctors__container .expert__container-slider-slide {
