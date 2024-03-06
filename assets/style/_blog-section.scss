@@ -50,8 +50,8 @@
                         font-weight: 400;
                       }
                       
-                     & h3{
-                          display: -webkit-box;
+                     & a{
+                          display:-webkit-box;
                           white-space: normal;
                           overflow: hidden;
                           -webkit-line-clamp: 2; 
@@ -60,6 +60,10 @@
                           text-overflow: ellipsis;
                           white-space: normal; 
                           margin-bottom: 5px;
+                          &:nth-last-of-type(1){
+                              -webkit-line-clamp: 1;                               
+                              text-decoration: underline
+                         }
                       }
                      & p{
                         display: -webkit-box;
@@ -72,17 +76,7 @@
                           white-space: normal; 
                           margin-bottom: 10px;
                      }
-                     & a{
-                        display: -webkit-box;
-                          white-space: normal;
-                          overflow: hidden;
-                          -webkit-line-clamp: 1; 
-                          -webkit-box-orient: vertical;
-                          box-orient: vertical;
-                          text-overflow: ellipsis;
-                          white-space: normal; 
-                     }
-                   
+                    
                   }
           }
       }

@@ -1,0 +1,134 @@
+.price {
+    margin-bottom: 120px;
+    @media screen  and (max-width:767px){
+        margin-bottom: 60px;
+    }
+    @media screen  and (max-width:367px){
+        margin-bottom: 30px;
+    }
+    &__container {
+         &-list {
+            display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+             &-item {
+                display: flex;
+                       align-items: start;
+                       flex-direction: column;
+                       font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: uppercase;
+                  
+                    & span{
+                        padding: 30px;
+                        max-width: 100%;
+                        width: 100%;
+                        background-color: $--blue;
+                        color: $--white;
+                        display: flex;
+                        align-items: center;
+                        @media screen and (max-width:767px) {
+                            font-size: 16px;
+                            padding: 30px 20px;
+                        }
+                    }
+                    & ul{
+                        display: flex;
+                        flex-direction: column;
+                        background-color: $--white;
+                        max-width: 100%;
+                        width: 100%;
+                        & li{
+                            background-color: $--white;
+                            display: flex;
+                            max-width: 100%;
+                            width: 100%;
+                            overflow: hidden;
+                            & span{
+                                text-transform: none;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                                background-color: inherit;
+                                padding: 10px 30px;
+                                color: $--black-silver;
+                                border: 1px solid $--gray-line;
+                                // max-width: 751px;
+                                @media screen and (max-width:550px) {
+                                    font-size: 12px;
+                                    padding: 16px 20px;
+                                }
+                                @media screen and (max-width:550px) {
+                                    font-size: 12px;
+                                    padding: 16px 20px;
+                                    word-break: break-word;
+                                }
+                            }
+                        & .price__container-btn{
+                            min-width: 130px;
+                            position: relative;
+                            max-width: 180px;
+                            width: 100%;
+                            display: flex;
+                            overflow: hidden;
+                            cursor: pointer;
+                            transition: all .3s ease;
+                            &:hover{
+                                & span,
+                                & .btn{
+                                    transform: translateX(-100%);
+                                }
+                            }
+                            & span{
+                               transition: all .3s ease;
+                                min-width: 130px;
+                                min-width: 100%;
+                                
+                                
+                            }
+                            & .btn{
+                                border-radius: 0;
+                                // min-width: 130px;
+                                // max-width: 100%;
+                                // width: 100%;
+                                // position: absolute;
+                                // top: 0;
+                                // left: 0;
+                                min-width: 100%;
+                                &:hover{
+                                    background-color: $--blue;
+                                }
+                            }
+                        }
+                        }
+                    }
+             }
+         }
+     }
+ }
+ 
+ //    &-list{
+    //     display: flex;
+    //     flex-direction: column;
+    //     border-radius: 10px;
+    //     &-item-top{
+    //         padding: 30px;
+    //         background-color: $--blue;
+    //         color: $--white;
+    //        display: flex;
+    //        align-items: center;
+    //        flex-direction: column;
+    //        justify-content: flex-start;
+    //        font-size: 20px;
+    //     font-style: normal;
+    //     font-weight: 600;
+    //     line-height: normal;
+    //     text-transform: uppercase;
+    //     //    &:nth-of-type(1){
+    //     //     border-radius: 10px 10px 0 0;
+    //     //    }
+    //     }
+    // }

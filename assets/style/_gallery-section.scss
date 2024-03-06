@@ -7,6 +7,19 @@
         margin-bottom: 50px;
     }
     &__container{
+        & img{
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        &-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            & h2{
+                margin-bottom: 0;
+            }
+        }
         &-wrap{
             display: flex;
             flex-direction: column;
@@ -39,5 +52,15 @@
                
             }
         }
+        .gallery__container-top-arrows{
+            @include arrowsWrap;
+        }
     }
+}
+.gallery .swiper-pagination-bullet.swiper-pagination-bullet {
+    border-color: transparent;
+    background-color: $--gray-line;
+}
+.gallery .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+    background-color: $--black-silver;
 }

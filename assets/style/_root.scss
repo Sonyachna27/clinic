@@ -31,7 +31,6 @@ $--gray:  #F7F7F7;
    
   }
   @mixin arrowsWrap{
-    
     position: relative;
     display: flex;
     gap: 10px;
@@ -39,7 +38,7 @@ $--gray:  #F7F7F7;
     width: 100%;
     height: 100%;
     @media screen and (max-width:425px) {
-        max-width: 70px;
+       display: none;
     }
   }
   @mixin accordTitle{
@@ -121,7 +120,7 @@ h1{
     }
     @media screen and (max-width:367px) {
         word-wrap: break-word;
-        @include adaptive-value('font-size',18, 36, 1330);
+        @include adaptive-value('font-size',20, 36, 1330);
     }
 }
 h2{
@@ -134,7 +133,7 @@ h2{
     }
     @media screen and (max-width:367px) {
         word-wrap: break-word;
-        @include adaptive-value('font-size',16, 36, 1330);
+        @include adaptive-value('font-size',20, 36, 1330);
     }
 }
 h3{
@@ -181,6 +180,11 @@ h3 span{
     color: $--blue;
     border-color: $--blue;
 }
+.black-btn{
+    background: $--white;
+    color: $--black-silver;
+    border-color: $--black-silver;
+}
 .time{
     display: inline-flex;
     padding: 5px 15px;
@@ -202,10 +206,10 @@ h3 span{
     line-height: normal;
   &-wrap{
     display: flex;
-gap: 5px;
-    & span{
+    gap: 5px;
+    flex-wrap: wrap;
+    & span:nth-last-of-type(1){
         color: $--blue;
-
 }
   }
 }
@@ -225,7 +229,6 @@ gap: 5px;
         width: 100%;
         word-wrap: break-word; 
         overflow-wrap: break-word; 
-        color: inherit;
         gap: 10px;
         & svg{
             max-width: 32px;
@@ -237,7 +240,7 @@ gap: 5px;
         color: $--blue;
             transition: .3s;
     }
-&  button{
+& div{
     @include blackBlue;
     border: none;
     margin-bottom: 0;
@@ -291,16 +294,19 @@ gap: 5px;
             width: 100%;
             transition: all .3s linear;
         }
-    }
-    
-    
+    }  
     @media screen and (max-width:367px) {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.active-tab{
+    background-color: $--blue;
+    color: $--white;
+    border-color: transparent;
+}
 .page-main{
-    display: grid;
-    grid-template-columns: .25fr .75fr;
+    
+    display: flex;
     gap: 20px;
     @media screen and (max-width:925px) {
         display: flex;
@@ -309,6 +315,10 @@ gap: 5px;
     & .container{
         padding: 0;
     }
+}
+.main-content{
+    max-width: 100%;
+    width: 100%;
 }
 .navbar{
     max-width: 310px;
@@ -329,6 +339,36 @@ gap: 5px;
         max-width: 100%;
         width: 100%;
     }
+    & .reviews__container-slider-slide{
+        max-width: 100%;
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        height: fit-content;
+        margin-bottom: 20px;
+        cursor: default;
+        &:hover{
+            background-color: $--white;
+            color: $--black-silver;
+        }
+        & p{
+            margin-bottom: 10px;
+            overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        text-overflow: ellipsis;
+        }
+    }
+    & .reviews__container-slider-slide-content-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        & span{
+            margin: 0;
+        }
+    }
     &-nav{
         border-radius: 20px;
         border: 1px solid $--gray-line;
@@ -344,7 +384,8 @@ gap: 5px;
             cursor: pointer;
             max-width: 100%;
             width: 100%;
-            // white-space: nowrap;
+            white-space: nowrap;
+            transition: all .3s linear;
             &:nth-of-type(1){
                 
                 & span {
@@ -381,19 +422,21 @@ gap: 5px;
         .menu-item{
             display: flex;
             align-items: flex-start;
-            transition: .3s linear;
+            transition:all .3s linear;
            height: auto;
            
         }
         .sub-menu{
-            max-height: 0;
             opacity: 0;
-            transition: opacity .7s linear, height .5s linear;
+            max-height: 0;
+            overflow: hidden;            
+            transition: all .3s linear;
             overflow: hidden;
             gap: 10px;
             background-color: $--white;
             color: $--black-silver;
             width: 100%;
+            padding: 0;
             border-radius: 0 0 20px 20px;
             & a{
                 @media (hover:hover) and (pointer:fine){

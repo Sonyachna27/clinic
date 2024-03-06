@@ -1,0 +1,48 @@
+.doctors{
+    margin-bottom: 120px;
+    @media screen and (max-width:767px) {
+        margin-bottom: 60px;
+    }
+    @media screen and (max-width:367px){
+        margin-bottom: 30px;
+    }
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 36px;
+        border: 1px solid $--gray-line;
+        border-radius: 20px;
+        background-color: $--white;
+        @media screen and (max-width:1023px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width:767px) {
+            flex-direction: column;
+            display: flex;
+        }
+        & .expert__container-slider-slide{
+            border: 1px solid $--gray-line;
+            padding: 16px;
+            width: 100%;
+            & img{
+                min-height: 241px;
+                height: 100%;
+            }
+            & .btn{
+                padding: 18.5px 10px;
+                white-space: nowrap;
+            }
+        }
+        &  .expert__container-slider-slide:hover > .expert__container-slider-slide-text .btn{
+            background: $--white;
+            color: $--blue;
+            border-color: $--blue;
+        }
+       & .expert__container-slider-slide:hover > .expert__container-slider-slide-text .white-btn{
+            background: $--blue;
+            color: $--white;
+            border-color: $--white;
+        }
+    }
+}

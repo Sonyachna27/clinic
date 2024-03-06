@@ -4,16 +4,21 @@
         gap: 20px;
         align-items: center;
         margin-bottom: 20px;
+
         @media screen and (max-width:877px) {
-            flex-direction: column;
+            flex-direction: column-reverse;
+            display: flex;
         }
         &-contacts{
             padding: 40px;
             background-color: $--white;
             border-radius: 20px;
             border: 1px solid $--gray-line;
-            max-width: 100%;
+            max-width: 310px;
             width: 100%;
+            @media screen and (max-width:877px) {
+                max-width: 100%;
+            }
             & span{
                 text-wrap: balance;
             }
@@ -33,13 +38,23 @@
                 }
             }
         }
-        & iframe{
-            border-radius: 20px;
-            max-width: 640px;
+        &-map{
+           max-width: 640px;
+           width: 100%;
+           border-radius: 20px;
+           max-height: 326px;
+           height: 100%;
+           @media screen and (max-width:877px) {
+            max-width: 100%;
+           }
+           & iframe{
+            max-width: 100%;
             width: 100%;
-            @media screen and (max-width:925px) {
-                max-width: 100%;
-            }
+            border-radius: 20px;
+            
+            
         }
+        }
+        
     }
 }
