@@ -6,21 +6,26 @@
         border-radius: 20px ;
         position: relative;
         display: flex;
+        @media screen and (max-width:995px) {
+            flex-direction: column-reverse;
+           
+        }
         &-content{
             display: flex;
             flex-direction: column;
             background-color: $--black-silver;
             border-radius: 20px;
-            padding: 215px 40px;
+            justify-content: center;
+            padding:40px;
             max-width: 616px;
             color: $--white;
             @media screen and (max-width:995px) {
                 max-width: 100%;
+                margin-top: -30px;
             }
             @media screen and (max-width:767px) {
-               height: 100dvh;
                justify-content: center;
-               padding: 215px 20px;
+               padding: 20px;
             }
             & div{
                 display: flex;
@@ -29,8 +34,11 @@
                 gap: 5px;
                 margin-bottom: 25px;
                 @media screen and (max-width:550px) {
-                    flex-direction: column;
+                    font-size: 12px;
                     align-items: flex-start;
+                }
+                @media screen and (max-width:367px) {
+                    flex-wrap: wrap;
                 }
                 & span{
                     display: flex;
@@ -66,7 +74,8 @@
             z-index: -1;
             border-radius: 0 20px 20px 0;
             @media  screen and (max-width:995px) {
-                display: none;
+                margin-left: 0px;
+            max-width:100%;
             }
             & img{
                 min-height: 100%;

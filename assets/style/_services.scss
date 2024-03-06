@@ -12,16 +12,38 @@
         @media screen and (max-width:767px) {
             padding: 30px 20px;
         }
+        .services-page & {
+            & h2{
+                display: none;
+            }
+            padding: 0;
+            background-color: transparent;
+        }
         &-wrap{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
+
+            .services-page & {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+                @media screen and (max-width:1023px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                @media screen and (max-width:767px) {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
             @media screen and (max-width:1023px) {
                 grid-template-columns: repeat(2, 1fr);
             }
             @media screen and (max-width:767px) {
                 display: flex;
-                flex-direction: column;
+                overflow: hidden;
+                overflow-x: scroll;
+                gap: 10px;
             }
             &-item{
                 display: flex;
@@ -31,6 +53,39 @@
                 background: $--white;
                 color: $--black-silver;
                 gap: 5px;
+                .services-page &{
+                    @media screen and (max-width:767px) {
+                        max-width: 100%;
+                        width: 100%;
+                        min-width: 100%;
+                    }
+                    @media screen and (max-width:446px) {
+                       
+                        min-width: 100%;
+                    }
+                    @media screen and (max-width:367px) {
+                        min-width: 100%;
+                    }
+                }
+                @media screen and (max-width:767px) {
+                    max-width: 61%;
+                    width: 100%;
+                    min-width: 60%;
+                }
+                @media screen and (max-width:446px) {
+                   
+                    min-width: 80%;
+                }
+                @media screen and (max-width:367px) {
+                    min-width: 90%;
+                }
+
+               &-list{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    
+               }
                 & a{
                     color: $--black-silver;
                     font-size: 14px;
@@ -45,6 +100,16 @@
                 }
                 &-top{
                     @include blackBlue;
+
+                    @media screen and (max-width:767px) {
+                        gap: 10px;
+                    }
+                    @media screen and (max-width:367px) {
+                        & a{
+                            word-break: break-word;
+                        }
+                       
+                    }
                 }
             }
         }

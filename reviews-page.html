@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/style/style.css">
     <title>Document</title>
 </head>
-<body class="reviews-page">
+<body class="book-page">
     <header>
         <a href="reviews-page.html">
         Отзывы
@@ -23,13 +23,13 @@
  </div>
           </div>
          </div>
-         <section class="reviews-form">
+         <section class="book">
             <div class="container">
-                <div class="reviews-form__container">
+                <div class="book__container">
                     <h2>Отзывы <span>о нас</span></h2>
-                    <div class="reviews-form__container-content">
+                    <div class="book__container-content">
                         <img src="./assets/images/reviews-form-img.jpg" alt="отзывы о нас">
-                        <div class="reviews-form__container-content-form">
+                        <div class="book__container-content-form">
                             <h3>Здесь можете оставить отзыв, <span>о нашей клинике</span></h3>
                             <form action="#">
                                 <input type="text" name="name" id="name" placeholder="Имя">
@@ -45,27 +45,8 @@
          </section>
          <section class="reviews">
             <div class="container">
-                <div class="reviews__container">
-                    <div class="reviews__container-top">
-                        <h2>ОТЗЫВЫ <span>О НАС</span></h2>
-                        <div class="reviews__container-top-arrows">
-                            <div class="reviews__container-top-arrow-prev prev">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-                                    <path d="M6.5 1L2.20711 5.29289C1.81658 5.68342 1.81658 6.31658 2.20711 6.70711L6.5 11" stroke="#DCE0E5" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                            </div>
-                            <div class="reviews__container-top-arrow-next next">
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.5 11L5.79289 6.70711C6.18342 6.31658 6.18342 5.68342 5.79289 5.29289L1.5 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews__container-slider">
-                        <div class="swiper reviewsSlider">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide reviews__container-slider-slide">
+                <div class="reviews__container reviews__container-out">
+                    <div class="swiper-slide reviews__container-slider-slide reviews-item">
                                 <div class="reviews__container-slider-slide-avatar">
                                     <img src="./assets/images/reviews-img1.jpg" alt="avatar">
                                 </div>
@@ -97,7 +78,7 @@
                                     </div>
                                 </div>
                               </div>
-                              <div class="swiper-slide reviews__container-slider-slide">
+                    <div class="swiper-slide reviews__container-slider-slide reviews-item">
                                 <div class="reviews__container-slider-slide-avatar">
                                     <img src="./assets/images/reviews-img2.svg" alt="avatar">
                                 </div>
@@ -129,7 +110,7 @@
                                     </div>
                                 </div>
                               </div>
-                              <div class="swiper-slide reviews__container-slider-slide">
+                    <div class="swiper-slide reviews__container-slider-slide reviews-item">
                                 <div class="reviews__container-slider-slide-avatar">
                                     <img src="./assets/images/reviews-img2.svg" alt="avatar">
                                 </div>
@@ -160,12 +141,7 @@
                                         <p>Когда Антон попал в Клинику Аскелепий, ему было 38. К тому моменту он страдал от алкогольной зависимости уже более 15 лет, но, как и большинство алкоголиков, не был готов признать свою проблему. Сначала крепкие напитки были атрибутом праздничного застолья, а потом очень быстро моментов трезвости почти не стало. Запои длились неделями. В моменты опьянения Антон становился агрессивным, бил супругу, садился пьяным за руль. Из-за «плохо самочувствия» начались проблемы в бизнесе, частые отсутствия на работе...</p>
                                     </div>
                                 </div>
-                              </div>
-                              
-                            </div>
-                            <div class="swiper-pagination"></div>
-                          </div>
-                    </div>
+                              </div>                              
                 </div>
             </div>
         </section>
@@ -213,7 +189,7 @@
                         </div>
                         <div class="footer__container-top-wrap-item">
                             <span>Контакты</span>
-                            <div class="footer__container-top-wrap-item-contact contact">
+                            <div class="footer__container-top-wrap-item-contact contacts">
                                 <span >
                                     <span>
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -233,15 +209,14 @@
                                         </span>
                                             +380 (066) 103 05 05
                                     </a>
-                                    <button>
+                                    <div>
                                         <span>24/7</span>
                                         КРУГЛОСУТОЧНАЯ ПОМОЩЬ В ЛЕЧЕНИИ
-                                    </button>
+                                    </div>
                                    
                                 </div>
                                 <div class="social">
                                     <a href="#">
-                                        <!-- <img src="./assets/images/telegram.svg" alt="telegram"> -->
                                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
                                             <circle cx="22.5" cy="22.5" r="22.25" stroke="#1264D5" stroke-width="0.5"/>
                                             <path d="M30.2727 15.3127L27.3527 30.557C27.3527 30.557 26.9441 31.6139 25.8218 31.107L19.0844 25.7576L19.0532 25.7418C19.9633 24.8956 27.0202 18.325 27.3287 18.0272C27.8061 17.5659 27.5097 17.2913 26.9553 17.6397L16.5313 24.4949L12.5098 23.0937C12.5098 23.0937 11.8769 22.8606 11.816 22.3537C11.7543 21.8459 12.5306 21.5713 12.5306 21.5713L28.9253 14.9111C28.9253 14.9111 30.2727 14.298 30.2727 15.3127Z" fill="#1264D5"/>
@@ -274,7 +249,6 @@
                                             </clipPath>
                                             </defs>
                                             </svg>
-                                            
                                     </a>
                             </div>
                             </div>
