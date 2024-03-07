@@ -70,35 +70,36 @@ window.addEventListener('DOMContentLoaded', () =>{
   
   }
   
+
   
   const expertSwiper = new Swiper(".expertSlider", {
-      speed: 400,
-      pagination: {
+    
+    speed: 400,
+    pagination: {
         el: ".swiper-pagination",
         clickable: true,
-      },
-      navigation:{
-          nextEl: '.expert__container-top-arrow-next',
-          prevEl: '.expert__container-top-arrow-prev',
-          
-      },
-      slidesPerView: 1,
+    },
+    navigation:{
+        nextEl: '.expert__container-top-arrow-next',
+        prevEl: '.expert__container-top-arrow-prev',
+    },
     spaceBetween: 10,
-    // Responsive breakpoints
+    
     breakpoints: {
-      480: {
-        slidesPerView: 2,
-      },
-      767: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      1023: {
-        slidesPerView: 4,
-        spaceBetween: 20
-      }
+        550: {
+            slidesPerView: 2,
+        },
+        767: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        1023: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
     }
-    });
+});
+
   const blogSwiper = new Swiper(".blogSlider", {
       speed: 400,
       pagination: {
@@ -166,6 +167,35 @@ window.addEventListener('DOMContentLoaded', () =>{
       navigation:{
           nextEl: '.gallery__container-top-arrow-next',
           prevEl: '.gallery__container-top-arrow-prev',
+          
+      },
+      slidesPerView: 1,
+    spaceBetween: 10,
+    // Responsive breakpoints
+    breakpoints: {
+      480: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 640px
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1023: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    }
+    });
+  const diplomaSlider = new Swiper(".diplomaSlider", {
+      speed: 400,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation:{
+          nextEl: '.diploma__container-top-arrow-next',
+          prevEl: '.diploma__container-top-arrow-prev',
           
       },
       slidesPerView: 1,

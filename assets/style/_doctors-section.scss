@@ -26,24 +26,23 @@
             border: 1px solid $--gray-line;
             padding: 16px;
             width: 100%;
-            & img{
-                min-height: 241px;
-                height: 100%;
-            }
+            
             & .btn{
                 padding: 18.5px 10px;
                 white-space: nowrap;
             }
+            
         }
-        &  .expert__container-slider-slide:hover > .expert__container-slider-slide-text .btn{
-            background: $--white;
-            color: $--blue;
-            border-color: $--blue;
-        }
-       & .expert__container-slider-slide:hover > .expert__container-slider-slide-text .white-btn{
-            background: $--blue;
-            color: $--white;
-            border-color: $--white;
-        }
+        
     }
+}
+.expert__container-slider-slide:hover  .btn{
+    background: $--white;
+    color: $--blue;
+    border-color: $--white;
+}
+ .expert__container-slider-slide:hover .white-btn{
+    background: $--blue;
+    color: $--white;
+    border-color: $--white;
 }
