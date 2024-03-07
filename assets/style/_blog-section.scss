@@ -8,9 +8,59 @@
       @media screen and (max-width:367px) {
         margin-bottom: 50px;
       }
+    .page-main-blog & {
+      padding: 0;
+    }  
+      
   &__container{
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
+      max-width: 100%;
+      width: 100%;
+      .page-main-blog & {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+      }
+
+      &-item{
+        border: 1px solid $--gray-line;
+        .page-main-blog  & img{
+          max-width: 420px;
+          max-height: 254px;
+          min-height: 254px;
+          margin: 0;
+          
+        }
+        & a {
+          margin-bottom: 10px;
+          &:nth-last-of-type(1){
+            margin-top: auto;
+          }
+        }
+        .swiper-slide {
+          flex-shrink: 1;
+        }
+        &-autor{
+          display: flex;
+          max-width: fit-content;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 40px;
+          & svg{
+            margin-right: 5px;
+            width: 20px;
+            height: 20px;
+            min-height: 20px;
+            min-width: 20px;
+            transition:  .3s linear;
+          }
+          & span{
+            margin-right: 10px;
+          }
+        }
+      }
       &-top{
          display: flex;
          align-items: center;
@@ -28,23 +78,37 @@
           &-slide{
               display: flex;
                   flex-direction: column;
-                  max-width: 100%;
+                  // max-width: 100%;
                  background-color: $--white;
                  border-radius: 20px;
                  color: $--black-silver;
                  transition: .3s linear;
                   cursor: pointer;
+              .page-main-blog & {
+                display: grid;
+                  grid-template-columns: .45fr .55fr;
+                  @media screen and (max-width:550px) {
+                    display: flex;
+                    flex-direction: column;
+                  }
+              }
+
                   &:hover{
                       background-color: $--blue;
                       color: $--white;
+                      & svg path{
+                        fill: $--white;
+                      }
                   }
                   img{
                      max-width: 100%;
+                     width: 100%;
                       object-fit: cover;
                       border-radius: 20px;
                       margin-bottom: 20px;
                       max-height: 240px;
                       min-height: 240px;
+                     
                   }
                   &-content{
                     padding: 20px;
@@ -62,9 +126,13 @@
                           text-overflow: ellipsis;
                           white-space: normal; 
                           margin-bottom: 5px;
+                          font-size: 20px;
+                          font-style: normal;
+                          font-weight: 500;
                           &:nth-last-of-type(1){
                               -webkit-line-clamp: 1;                               
-                              text-decoration: underline
+                              text-decoration: underline;
+                              font-weight: 400;
                          }
                       }
                      & p{
@@ -80,6 +148,7 @@
                      }
                     
                   }
+
           }
       }
   }

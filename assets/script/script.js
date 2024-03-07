@@ -70,8 +70,6 @@ window.addEventListener('DOMContentLoaded', () =>{
   
   }
   
-
-  
   const expertSwiper = new Swiper(".expertSlider", {
     
     speed: 400,
@@ -94,7 +92,7 @@ window.addEventListener('DOMContentLoaded', () =>{
             spaceBetween: 20
         },
         1023: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 20
         }
     }
@@ -320,6 +318,34 @@ window.addEventListener('DOMContentLoaded', () =>{
       activeServicesTabs();
       
      }
-  
-  
+  const commentItem = document.querySelectorAll('.comment__container-item');
+  const commentLoadMore = document.querySelector('#commentLoadMore');
+
+  if(commentItem){
+    const commentItemArray = Array.from(commentItem);
+
+    function showComment() {
+        if (commentItemArray.length <= 2) {
+            commentItemArray.forEach((comment) => {
+                comment.style.display = "flex";
+                commentLoadMore.style.display = "none";
+            });
+        }
+        if (commentItemArray.length > 2) {
+            commentItemArray.slice(2).forEach((c) => c.style.display = 'none');
+            commentLoadMore.style.display = "inline-flex";
+            loadComment(); 
+        }
+    }
+    
+    function loadComment() {
+        commentLoadMore.addEventListener('click', () => {
+            commentItemArray.slice(2).forEach((c) => c.style.display = 'flex');
+            commentLoadMore.style.display = "none";
+        });
+    }
+    
+    showComment();
+    
+  }
 })
