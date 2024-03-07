@@ -1,0 +1,48 @@
+.about{
+    padding: 39px;
+    border-radius: 20px;
+    background-color: $--white;
+    border: 1px solid $--gray-line;
+    margin-bottom: 60px;
+    @media screen and (max-width:767px) {
+        margin-bottom: 30px;
+        padding: 19px;
+    }
+    &__container{
+        & h3{
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        & p{
+            margin-bottom: 10px;
+        }
+        & ul{
+            list-style: disc;
+            list-style-position: inside;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        & img{
+            margin-bottom: 40px;
+            border-radius: 20px;
+        }
+       & .advantages__container-wrap-item{
+        padding: 20px;
+        & img{
+            margin-bottom: 0;
+        }
+        & h3{
+            text-transform: none;
+            margin-bottom: 0;
+        }
+        & p,
+        & span{
+            margin-bottom: 0;
+        }
+       }
+    }
+}

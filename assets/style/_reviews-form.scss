@@ -24,12 +24,18 @@
                 flex-direction: column;
                 
             }
+            .page-main-blog & {
+                display: flex;
+                @media screen and (max-width:1023px) {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
             & img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 20px;
-                // max-height: 416px;
                 @media screen and (max-width:1023px) {
                     max-height: 100%;
                 }
@@ -37,7 +43,12 @@
             &-form{
                 display: flex;
                 flex-direction: column;
-
+                .page-main-blog & {
+                    @media screen and (max-width:1023px) {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
                 & h3{
                     line-height: normal;
                     font-size: 24px;
@@ -89,6 +100,12 @@
                     max-width: 49%;
                      .page-main &{
                         max-width: 48%;
+                        @media screen and (max-width:1023px) {
+                            max-width: 100%;
+                      }
+                    }
+                     .page-main-blog &{
+                        max-width: 49%;
                         @media screen and (max-width:1023px) {
                             max-width: 100%;
                       }
