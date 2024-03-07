@@ -6,12 +6,22 @@
           @media screen and (max-width:367px) {
             margin-bottom: 50px;
           }
+       .doctor-single & .container{
+        max-width: 970px;
+      }  
     &__container{
         display: flex;
         flex-direction: column;
-        padding: 60px;
+        padding: 56px;
         background-color: $--black-silver;
         border-radius: 20px;
+
+        .doctor-single  & {
+            padding: 36px;
+            @media screen and (max-width:767px) {
+                padding: 18px;
+              }
+        }
         @media screen and (max-width:767px) {
             padding: 30px 20px;
           }
@@ -32,18 +42,32 @@
         }
         &-slider{
             &-slide{
+                height: auto;
+                // max-width: 283px;
+                // width: 100%;
                 display: flex;
                     flex-direction: column;
-                    max-width: 100%;
+                    
                    background-color: $--white;
                    border-radius: 20px;
                    color: $--black-silver;
                    padding: 20px;
                    transition: .3s linear;
                     cursor: pointer;
+                   
                     &:hover{
                         background-color: $--blue;
                         color: $--white;
+                       & .btn{
+                            background: $--white;
+                            color: $--blue;
+                            border-color: $--white;
+                        }
+                       & .white-btn{
+                            background: $--blue;
+                            color: $--white;
+                            border-color: $--white;
+                        }
                     }
                     img{
                        max-width: 100%;
@@ -51,7 +75,6 @@
                         border-radius: 15px;
                         margin-bottom: 20px;
                     }
-                    &-text{
                         & .time{
                             display: inline-flex;
                             padding: 5px 15px;
@@ -63,10 +86,12 @@
                             font-weight: 500;
                             color: $--blue;
                             margin-bottom: 10px;
+                            max-width: fit-content;
                         }
                         
                        & h3{
                             display: -webkit-box;
+                            
                             white-space: normal;
                             text-transform: uppercase;
                             overflow: hidden;
@@ -88,37 +113,30 @@
                             white-space: normal; 
                             font-size: 14px;
                             font-weight: 300;
-                            &:not(:nth-last-of-type(1)){
-                                margin-bottom: 5px;
-                            }
-                            &:nth-last-of-type(1){
-                                margin-bottom: 20px;
-                            }
+                           
                         }
                         &-pos{
                             -webkit-line-clamp: 1; 
+                            margin-bottom: 5px;
                         }
+                       &-edu{
+                        margin-bottom: 20px;
+                       }
                         & .btn{
                             max-width: 100%;
                             width: 100%;
                             margin-bottom: 5px;
+                            
                         }
-                    }
+                       & button{
+                            margin-top: auto;
+                        }
             }
-            .expert__container-slider-slide:hover > .expert__container-slider-slide-text .btn{
-                background: $--white;
-                color: $--blue;
-                border-color: $--blue;
-            }
-            .expert__container-slider-slide:hover > .expert__container-slider-slide-text .white-btn{
-                background: $--blue;
-                color: $--white;
-                border-color: $--white;
-            }
-          
+            
         }
     }
 }
+
 .swiper-wrapper{
     padding-bottom: 30px;
     img{
