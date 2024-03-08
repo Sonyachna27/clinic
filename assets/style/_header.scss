@@ -6,4 +6,78 @@ header{
     width: 100%;
     display: flex; 
     gap: 10px;
+    background: $--white-blue;
+    z-index: 20;
+    height: auto;
+}
+.header{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        &-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0;
+            gap: 5px;
+            @media screen and (max-width:1023px) {
+                flex-wrap: wrap;
+            }
+            & .logo{
+                margin: 0 auto;
+            }
+               & span{
+                @include blackBlue;
+                gap: 10px;
+                margin: 0;
+                text-transform: uppercase;
+                @media screen and (max-width:1240px) {
+                    font-size: 13px;
+                }
+                @media screen and (max-width:1023px) {
+                    display: none;
+                }
+               }
+               & a{
+                @include blackBlue;
+                gap: 10px;
+                margin: 0;
+                max-width: 202px;
+                @media screen and (max-width:1023px) {
+                    display: none;
+                }
+                @media screen and (max-width:1240px) {
+                    font-size: 13px;
+                }
+               }
+                & div{
+                    @include blackBlue;
+                    gap: 10px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    max-width: 290px;
+                    margin: 0;
+                    @media screen and (max-width:1023px) {
+                        display: none;
+                    }
+                    & span{
+                        max-width: 40px;
+                        max-height: 40px;
+                        min-width: 40px;
+                        min-height: 40px;
+                    }
+                }
+               & .btn{
+                    max-width: 190px;
+                    width: 100%;
+                    padding: 12px;
+                } 
+        }
+        &-bottom{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
 }

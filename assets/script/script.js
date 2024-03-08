@@ -1,4 +1,21 @@
 window.addEventListener('DOMContentLoaded', () =>{
+  const popUpBlock = document.querySelector('.popup');
+
+  if(popUpBlock){
+   const closePopUp = document.querySelector('.popup__content-close-btn');
+   const popupButtons = document.querySelectorAll('[data-button="popup"]');
+
+   popupButtons.forEach((popBtn) => {
+    popBtn.addEventListener('click', () =>{
+      popUpBlock.classList.add('open');
+    })
+  });
+  closePopUp.addEventListener('click', () =>{
+    popUpBlock.classList.remove('open');
+  });
+
+}
+
   const stageList = document.querySelector('.stage__container-wrap');
   if(stageList){
     const allContentBlocks = Array.from(document.querySelectorAll('.stage__container-wrap-content'));
@@ -92,6 +109,10 @@ window.addEventListener('DOMContentLoaded', () =>{
             spaceBetween: 20
         },
         1023: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        1240: {
             slidesPerView: 4,
             spaceBetween: 20
         }
@@ -200,11 +221,11 @@ window.addEventListener('DOMContentLoaded', () =>{
     spaceBetween: 10,
     // Responsive breakpoints
     breakpoints: {
-      480: {
+      367: {
         slidesPerView: 1,
       },
       // when window width is >= 640px
-      767: {
+      550: {
         slidesPerView: 2,
         spaceBetween: 20
       },

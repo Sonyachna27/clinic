@@ -15,12 +15,17 @@
         padding: 56px;
         background-color: $--black-silver;
         border-radius: 20px;
-
+        border: 1px solid transparent;
         .doctor-single  & {
             padding: 36px;
             @media screen and (max-width:767px) {
                 padding: 18px;
               }
+        }
+        .about-page &,
+        .doctor-single & {
+            background-color: $--white;
+            border-color: $--gray-line;
         }
         @media screen and (max-width:767px) {
             padding: 30px 20px;
@@ -43,18 +48,23 @@
         &-slider{
             &-slide{
                 height: auto;
-                // max-width: 283px;
-                // width: 100%;
                 display: flex;
                     flex-direction: column;
                     
                    background-color: $--white;
-                   border-radius: 20px;
+                   border-radius: 19px;
                    color: $--black-silver;
                    padding: 20px;
+                   border: 1px solid transparent;
                    transition: .3s linear;
                     cursor: pointer;
-                   
+                   .about-page &,
+                   .doctor-single & {
+                    border-color: $--gray-line;
+//                     -webkit-box-shadow: 1px 1px 8px 0px rgba(153,153,153,1);
+// -moz-box-shadow: 1px 1px 8px 0px rgba(153,153,153,1);
+// box-shadow: 1px 1px 8px 0px rgba(153,153,153,1);
+                   }
                     &:hover{
                         background-color: $--blue;
                         color: $--white;
@@ -126,7 +136,7 @@
                             max-width: 100%;
                             width: 100%;
                             margin-bottom: 5px;
-                            
+                            padding: 12.5px;
                         }
                        & button{
                             margin-top: auto;

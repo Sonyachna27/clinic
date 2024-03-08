@@ -13,15 +13,12 @@
     }  
       
   &__container{
-      // display: flex;
-      // flex-direction: column;
       max-width: 100%;
       width: 100%;
       .page-main-blog & {
         display: flex;
         flex-direction: column;
         gap: 20px;
-
       }
 
       &-item{
@@ -31,6 +28,9 @@
           max-height: 254px;
           min-height: 254px;
           margin: 0;
+          @media screen and (max-width:550px) {
+          max-width: 100%;
+          }
           
         }
         & a {
