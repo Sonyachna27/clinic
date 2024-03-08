@@ -5,6 +5,9 @@
         background-color: $--white;
         border-radius: 20px;
         border: 1px solid $--gray-line;
+        @media screen and (max-width:550px) {
+          padding: 20px;
+        }
         &-top{
             display: flex;
             align-items: center;
@@ -13,6 +16,7 @@
             margin-bottom: 40px;
             @media screen and (max-width:425px) {
              flex-direction: column;
+             margin-bottom: 20px;
             }
             & h2{
              margin-bottom: 0;
@@ -26,8 +30,12 @@
               & img{
                 min-height: 100%;
                 max-height: 100%;
+                @media screen and (max-width:767px) {
+                  max-height: 80%;
+                  height: 100%;
+                }
               } 
-
+              
             }
         }
     }
@@ -48,3 +56,9 @@
 .diploma .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
     background-color: $--black-silver;
 }
+// .diploma .swiper-wraper .diploma__container-slider-slide{
+//   @media screen and (max-width:767px){
+//     max-height: 80%;
+
+//   }
+// }

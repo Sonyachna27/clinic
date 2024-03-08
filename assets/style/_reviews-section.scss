@@ -96,10 +96,25 @@
                     grid-template-columns: .9fr .1fr;
                     align-items: center;
                     gap: 5px;
+                &.comment__item-title{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                  & .reviews__container-slider-slide-content-title-date{
+                    order: 1;
+                    margin: 0;
+                    }
+                 & .reviews__container-slider-slide-content-title-name{
+                    order: 2;
+                    }
+                & .reviews__container-slider-slide-content-title-star{
+                    order: 3;
+                }
+                }
                     .comment__container &{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
             &-date{
                 margin: 0;
             }

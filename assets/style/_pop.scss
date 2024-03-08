@@ -1,0 +1,118 @@
+.popup{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+     z-index: 50;
+     &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100dvh;
+        z-index: 1;
+        max-width: 100%;
+        width: 100%;
+        opacity: 0.5;
+        background: $--black-silver;
+     }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 40px;
+        background-color: $--white;
+        opacity: 1;
+        z-index: 2;
+        max-width: 680px;
+        border-radius: 20px;
+        position: relative;
+        margin: 0 auto;
+        @media screen and (max-width:767px) {
+            padding: 20px;
+        }
+        &-close-btn{
+            position: absolute;
+            top: 5%;
+            right: 30px;
+            background: none;
+            outline: none;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+
+            & svg{
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+        & h2{
+            margin-bottom: 5px;
+            padding-right: 30px;
+        }
+        & span{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &-form{
+            display: flex;
+            flex-direction: column;
+            & span{
+                margin-bottom: 0;
+            }
+            & input:not([type="submit"]),
+            & input:not([type="checkbox"]){
+                display: flex;
+                max-width: 100%;
+                width: 100%;
+                padding: 20px;
+                align-items: center;
+                gap: 10px;
+                border-radius: 10px;
+                border: 1px solid $--gray-line;
+                margin-bottom: 5px;
+                outline: none;
+            }
+            & input:not([type="submit"])::placeholder{
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 300;
+            }
+        
+            & label{
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                color:#A0A0A0;
+                margin:20px 0;
+                flex-wrap: wrap;
+                @media screen and (max-width:767px) {
+                    font-size: 13px;
+                }
+                   .popup__content-form-checkbox{
+                        max-width: 15px;
+                        width: 15px;
+                        height: 15px;
+                        margin: 0;
+                        margin-bottom: 0;
+                        white-space: pre-wrap;
+                    }      
+                
+                & a{
+                    display: inline-block;
+                    color: $--blue;
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+    }
+}
+ .open.popup {
+    display: flex;
+}

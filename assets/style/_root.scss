@@ -93,7 +93,7 @@ scroll-behavior: smooth;
 }
 
 main{
-    margin-top: 100px;
+    margin-top: 115px;
 }
 .container{
     max-width: 1330px;
@@ -331,12 +331,13 @@ h3 span{
     }
 }
 .main-content{
-    max-width: 100%;
-    width: 100%;
+    width: 76%;
+    @media screen and (max-width:925px) {
+        width: 100%;
+    }
 }
 .navbar{
-    max-width: 310px;
-    width: 100%;
+    width: 24%;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
@@ -368,19 +369,23 @@ h3 span{
         & p{
             margin-bottom: 10px;
             overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        box-orient: vertical;
-        text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            box-orient: vertical;
+            text-overflow: ellipsis;
         }
     }
     & .reviews__container-slider-slide-content-title {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+       
         & span{
             margin: 0;
+        }
+        &-star{
+            grid-row: 2/2;
+        }
+        &-date{
+            grid-row: 2/2;
         }
     }
     &-nav{
@@ -398,7 +403,7 @@ h3 span{
             cursor: pointer;
             max-width: 100%;
             width: 100%;
-            white-space: nowrap;
+            // white-space: nowrap;
             transition: all .3s linear;
             &:nth-of-type(1){
                 

@@ -43,9 +43,14 @@
                 padding: 30px;
             }
             @media screen and (max-width:767px) {
-                padding: 20px;
+                padding: 40px 10px 10px 10px;
                 margin-left: 0px;
+                margin-top: -15px;
                 max-width: 100%;
+                border-radius: 0 0 20px 20px;
+            }
+            & h2{
+                margin-bottom: 10px;
             }
             & p{
                 text-wrap: balance;
@@ -55,6 +60,9 @@
                 }
                 &:nth-last-of-type(1){
                   margin-bottom: 30px;
+                  @media screen and (max-width:550px) {
+                    margin-bottom: 20px;
+                  }
                 }
             }
         }
