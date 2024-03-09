@@ -5,6 +5,9 @@
         border: 1px solid $--gray-line;
         background-color: $--white;
         border-radius: 20px;
+        @media screen and (max-width:767px) {
+            padding: 20px;
+        }
         &-wrap{
             display: flex;
             flex-direction: column;
