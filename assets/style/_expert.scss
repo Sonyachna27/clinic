@@ -4,11 +4,8 @@
             margin-bottom: 60px;
           }
           @media screen and (max-width:367px) {
-            margin-bottom: 50px;
-          }
-       .doctor-single & .container{
-        max-width: 970px;
-      }  
+            margin-bottom: 30px;
+          }  
     &__container{
         display: flex;
         flex-direction: column;
@@ -61,9 +58,6 @@
                    .about-page &,
                    .doctor-single & {
                     border-color: $--gray-line;
-//                     -webkit-box-shadow: 1px 1px 8px 0px rgba(153,153,153,1);
-// -moz-box-shadow: 1px 1px 8px 0px rgba(153,153,153,1);
-// box-shadow: 1px 1px 8px 0px rgba(153,153,153,1);
                    }
                     &:hover{
                         background-color: $--blue;
@@ -99,9 +93,10 @@
                             max-width: fit-content;
                         }
                         
-                       & h3{
+                       & h3,
+                       &-pos,
+                        &-edu{
                             display: -webkit-box;
-                            
                             white-space: normal;
                             text-transform: uppercase;
                             overflow: hidden;
@@ -110,20 +105,12 @@
                             box-orient: vertical;
                             text-overflow: ellipsis;
                             white-space: normal; 
-                        }
-                       
+                        }                       
                      &-pos,
                      &-edu{
-                            overflow: hidden;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 2; 
-                            -webkit-box-orient: vertical;
-                            box-orient: vertical;
-                            text-overflow: ellipsis;
-                            white-space: normal; 
-                            font-size: 14px;
-                            font-weight: 300;
                            
+                            font-size: 14px;
+                            font-weight: 300;                           
                         }
                         &-pos{
                             -webkit-line-clamp: 1; 
