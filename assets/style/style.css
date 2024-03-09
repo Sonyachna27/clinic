@@ -384,6 +384,12 @@ h3 span {
   flex-direction: row-reverse;
   gap: 20px;
 }
+@media screen and (max-width: 925px) {
+  .page-main-blog {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .page-main-blog .container {
   padding: 0;
   max-width: 970px;
@@ -406,7 +412,7 @@ h3 span {
 }
 @media screen and (max-width: 925px) {
   .navbar {
-    display: none;
+    width: 100%;
   }
 }
 .navbar h3 {
