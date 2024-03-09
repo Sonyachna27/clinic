@@ -375,6 +375,9 @@ h3 span {
     flex-direction: column;
   }
 }
+.page-main .container {
+  padding: 0;
+}
 
 .page-main-blog {
   display: flex;
@@ -3253,6 +3256,11 @@ header {
   background-color: #FFF;
   border-radius: 20px;
 }
+@media screen and (max-width: 767px) {
+  .comment__container {
+    padding: 20px;
+  }
+}
 .comment__container-wrap {
   display: flex;
   flex-direction: column;
@@ -3321,7 +3329,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100dvh;
   z-index: 50;
 }
 .popup__bg {
