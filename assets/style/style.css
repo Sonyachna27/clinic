@@ -873,11 +873,10 @@ header {
 .main__container-content .btn {
   max-width: 291px;
 }
-@media (hover: hover) and (pointer: fine) {
-  .main__container-content .btn:hover {
-    color: #1264D5;
-    background-color: transparent;
-    border-color: #1264D5;
+@media screen and (max-width: 895px) {
+  .main__container-content .btn {
+    max-width: 100%;
+    width: 100%;
   }
 }
 .main__container-image {

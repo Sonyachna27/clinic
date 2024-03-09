@@ -17,8 +17,7 @@
             justify-content: center;
             padding:40px;
             width: 47%;
-            color: $--white;
-            // width: 100%;
+            color: $--white;  
             @media screen and (max-width:895px) {
                 width: 100%;
                 margin-top: -30px;
@@ -62,12 +61,9 @@
             }
             .btn{
                 max-width: 291px;
-                @media (hover: hover) and (pointer: fine){
-                    &:hover{
-                        color: $--blue;
-                        background-color: transparent;
-                        border-color:$--blue;
-                    }
+                @media screen and (max-width:895px) {
+                    max-width: 100%;
+                    width: 100%;
                 }
             }
         }
