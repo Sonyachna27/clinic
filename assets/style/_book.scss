@@ -103,20 +103,20 @@
                 & input:nth-of-type(2){
                     max-width: 49%;
                      .page-main &{
-                        max-width: 48%;
+                        max-width: 48.2%;
                         @media screen and (max-width:1023px) {
                             max-width: 100%;
                       }
                     }
                      .page-main-blog &{
-                        max-width: 49%;
+                        max-width: 49.2%;
                         @media screen and (max-width:1023px) {
                             max-width: 100%;
                       }
                     }
                    
                     @media screen and (max-width:1240px) {
-                        max-width: 48%;
+                        max-width: 48.2%;
                     }
                     @media screen and (max-width:1023px) {
                         max-width: 100%;
@@ -132,7 +132,6 @@
             
             }
         }
-
         }
    }
 

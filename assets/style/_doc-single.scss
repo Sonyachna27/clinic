@@ -58,6 +58,7 @@
         margin-bottom: 20px;
         & li{
             position: relative;
+            margin-left: 10px;
             &:before{
                 content: '-';
                 position: absolute;
@@ -65,7 +66,7 @@
                 transform: translate(-50%, 50%);
                 width: 5px;
                 height: 1px;
-
+                left: -5px;
             }
         }
         }
