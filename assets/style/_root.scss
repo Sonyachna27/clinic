@@ -333,13 +333,13 @@ h3 span{
     }
 }
 .main-content{
-    width: 76%;
+    width: 75%;
     @media screen and (max-width:925px) {
         width: 100%;
     }
 }
 .navbar{
-    width: 24%;
+    width: 25%;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
@@ -405,13 +405,17 @@ h3 span{
             cursor: pointer;
             max-width: 100%;
             width: 100%;
-            // white-space: nowrap;
+            border-bottom: 1px solid $--gray-line;
             transition: all .3s linear;
             &:nth-of-type(1){
                 
                 & span {
                     border-radius: 20px 20px 0px 0;
                 }
+            }
+            &:nth-last-of-type(1){
+                
+                border-bottom: none;
             }
             & span{
                 padding: 20px;

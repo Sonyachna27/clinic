@@ -38,6 +38,12 @@
             flex-direction: column;
             margin-bottom: 20px;
            }
+           .about-page &,
+           .doctor-single & {
+            & h2{
+                color: $--black-silver;
+            }
+           }
            & h2{
             margin-bottom: 0;
            }
@@ -98,17 +104,21 @@
                         &-edu{
                             display: -webkit-box;
                             white-space: normal;
-                            text-transform: uppercase;
+                            
                             overflow: hidden;
                             -webkit-line-clamp: 2; 
                             -webkit-box-orient: vertical;
                             box-orient: vertical;
                             text-overflow: ellipsis;
                             white-space: normal; 
-                        }                       
+                        }     
+                        & h3{
+                            text-transform: uppercase;
+                            margin-bottom: 5px;
+                            font-weight: 600;
+                        }                  
                      &-pos,
                      &-edu{
-                           
                             font-size: 14px;
                             font-weight: 300;                           
                         }
