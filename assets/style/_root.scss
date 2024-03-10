@@ -167,6 +167,7 @@ h3 span{
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
+    transition: .3s ease;
 }
 
 @media (hover:hover) and (pointer:fine){
@@ -497,5 +498,26 @@ h3 span{
             padding: 20px;
         }
        }
+    }
+}
+.mb-m{
+    margin-bottom: 120px;
+    @media screen and (max-width:767px) {
+        margin-bottom: 60px;
+    }
+    @media screen and (max-width:367px) {
+        margin-bottom: 30px;
+    }
+}
+.mb-s{
+    margin-bottom: 60px;
+    @media screen and (max-width:367px) {
+        margin-bottom: 30px;
+    }
+}
+.mb-xs{
+    margin-bottom: 40px;
+    @media screen and (max-width:367px) {
+        margin-bottom: 20px;
     }
 }

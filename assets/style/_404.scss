@@ -1,11 +1,5 @@
 .error{
-    margin-bottom: 120px;
-    @media screen and (max-width:1023px) {
-        margin-bottom: 60px;
-    }
-    @media screen and (max-width:767px) {
-        margin-bottom: 30px;
-    }
+  
     &__container{
         display: flex;
         @media screen and (max-width:767px) {
@@ -21,6 +15,7 @@
             width: 100%;
             @media screen and (max-width:1023px) {
                 padding: 30px 40px;
+                max-height: 450px;
             }
             @media screen and (max-width:767px) {
                 padding: 20px 10px;
