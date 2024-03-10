@@ -232,6 +232,7 @@ h3 span{
         word-wrap: break-word; 
         overflow-wrap: break-word; 
         gap: 10px;
+        margin-bottom: 0;
         & svg{
             max-width: 32px;
             width: 100%;
@@ -267,6 +268,7 @@ h3 span{
         max-width: 40px;
         max-height: 40px;
         padding: 0px;
+        margin-bottom: 0;
     }
    }
 }
