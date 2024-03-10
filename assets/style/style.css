@@ -396,7 +396,7 @@ h3 span {
 }
 
 .main-content {
-  width: 76%;
+  width: 75%;
 }
 @media screen and (max-width: 925px) {
   .main-content {
@@ -405,7 +405,7 @@ h3 span {
 }
 
 .navbar {
-  width: 24%;
+  width: 25%;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
@@ -473,10 +473,14 @@ h3 span {
   cursor: pointer;
   max-width: 100%;
   width: 100%;
+  border-bottom: 1px solid #DCE0E5;
   transition: all 0.3s linear;
 }
 .navbar-nav-list-item:nth-of-type(1) span {
   border-radius: 20px 20px 0px 0;
+}
+.navbar-nav-list-item:nth-last-of-type(1) {
+  border-bottom: none;
 }
 .navbar-nav-list-item span {
   padding: 20px;
@@ -1310,6 +1314,9 @@ header {
     margin-bottom: 20px;
   }
 }
+.about-page .expert__container-top h2, .doctor-single .expert__container-top h2 {
+  color: #283441;
+}
 .expert__container-top h2 {
   margin-bottom: 0;
 }
@@ -1366,13 +1373,17 @@ header {
 .expert__container-slider-slide h3, .expert__container-slider-slide-pos, .expert__container-slider-slide-edu {
   display: -webkit-box;
   white-space: normal;
-  text-transform: uppercase;
   overflow: hidden;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   box-orient: vertical;
   text-overflow: ellipsis;
   white-space: normal;
+}
+.expert__container-slider-slide h3 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 .expert__container-slider-slide-pos, .expert__container-slider-slide-edu {
   font-size: 14px;
@@ -1457,14 +1468,14 @@ header {
 .blog__container-item {
   border: 1px solid #DCE0E5;
 }
-.page-main-blog .blog__container-item img {
+.blog__container-wrap .blog__container-item img {
   max-width: 420px;
   max-height: 254px;
   min-height: 254px;
   margin: 0;
 }
 @media screen and (max-width: 550px) {
-  .page-main-blog .blog__container-item img {
+  .blog__container-wrap .blog__container-item img {
     max-width: 100%;
   }
 }
@@ -1520,12 +1531,12 @@ header {
   transition: 0.3s linear;
   cursor: pointer;
 }
-.page-main-blog .blog__container-slider-slide {
+.blog__container-wrap .blog__container-slider-slide {
   display: grid;
   grid-template-columns: 0.45fr 0.55fr;
 }
 @media screen and (max-width: 550px) {
-  .page-main-blog .blog__container-slider-slide {
+  .blog__container-wrap .blog__container-slider-slide {
     display: flex;
     flex-direction: column;
   }
@@ -1547,6 +1558,9 @@ header {
   max-height: 240px;
   min-height: 240px;
 }
+.blog__container-wrap .blog__container-slider-slide img {
+  margin-bottom: 0;
+}
 .blog__container-slider-slide-content {
   padding: 20px;
 }
@@ -1567,10 +1581,14 @@ header {
   font-style: normal;
   font-weight: 500;
 }
+.blog__container-wrap .blog__container-slider-slide-content a {
+  font-size: 14px;
+}
 .blog__container-slider-slide-content a:nth-last-of-type(1) {
   -webkit-line-clamp: 1;
   text-decoration: underline;
   font-weight: 400;
+  font-size: 14px;
 }
 .blog__container-slider-slide-content p {
   display: -webkit-box;
@@ -2058,16 +2076,20 @@ header {
 }
 .faq__container-accord .faq__container-accord-item.active .faq__container-accord-item-top svg circle {
   fill: #FFF;
+  stroke: #FFF;
 }
 .faq__container-accord .faq__container-accord-item.active .faq__container-accord-item-top svg {
   transform: rotate(45deg);
 }
 
 .book {
+  margin-bottom: 60px;
+}
+.reviews-page .book {
   margin-bottom: 120px;
 }
 @media screen and (max-width: 767px) {
-  .book {
+  .reviews-page .book {
     margin-bottom: 60px;
   }
 }
@@ -2729,6 +2751,7 @@ header {
   padding: 10px;
   max-width: 60px;
   max-height: 60px;
+  min-height: 60px;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -2752,12 +2775,7 @@ header {
 }
 
 .single {
-  margin-bottom: 120px;
-}
-@media screen and (max-width: 767px) {
-  .single {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
 }
 @media screen and (max-width: 367px) {
   .single {
@@ -2805,13 +2823,16 @@ header {
      object-fit: contain;
 }
 .single__container .advantages__container-wrap-item {
-  padding: 20px;
+  padding: 19px;
 }
 .single__container .advantages__container-wrap-item h3 {
   text-transform: none;
+  margin-bottom: 0;
+  font-size: 16px;
 }
 .single__container .advantages__container-wrap-item p {
   margin-bottom: 0px;
+  font-size: 12px;
 }
 .single__container-call {
   display: grid;
@@ -2931,6 +2952,9 @@ header {
   list-style-type: decimal;
   list-style-position: outside;
 }
+.single__container-tabs-content .price__container-list-item ul {
+  gap: 0;
+}
 
 .doctors {
   margin-bottom: 120px;
@@ -2994,7 +3018,7 @@ header {
 .doc__container {
   display: flex;
   display: grid;
-  grid-template-columns: 0.37fr 0.63fr;
+  grid-template-columns: 0.34fr 0.66fr;
   align-items: start;
   gap: 40px;
   padding: 36px;
