@@ -27,12 +27,16 @@
         }
         & a {
           margin-bottom: 10px;
-          &:nth-last-of-type(1){
-            margin-top: auto;
-          }
+          // &:nth-last-of-type(1){
+          //   margin-top: auto;
+          // }
         }
         .swiper-slide {
           flex-shrink: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+          justify-content: center;
         }
         &-autor{
           display: flex;

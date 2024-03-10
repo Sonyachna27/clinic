@@ -254,6 +254,7 @@ h3 span {
   word-wrap: break-word;
   overflow-wrap: break-word;
   gap: 10px;
+  margin-bottom: 0;
 }
 .contacts a svg,
 .contacts span svg {
@@ -325,6 +326,7 @@ h3 span {
   max-width: 40px;
   max-height: 40px;
   padding: 0px;
+  margin-bottom: 0;
 }
 
 .social {
@@ -1418,6 +1420,7 @@ header {
   margin-bottom: 5px;
   padding: 12.5px;
   z-index: 2;
+  text-align: center;
 }
 .expert__container-slider-slide button {
   margin-top: auto;
@@ -1484,11 +1487,12 @@ header {
 .blog__container-item a {
   margin-bottom: 10px;
 }
-.blog__container-item a:nth-last-of-type(1) {
-  margin-top: auto;
-}
 .blog__container-item .swiper-slide {
   flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
 }
 .blog__container-item-autor {
   display: flex;
@@ -2235,7 +2239,7 @@ header {
   align-items: center;
   background-color: #FFF;
 }
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 1023px) {
   .footer__container-top {
     padding: 40px;
   }
@@ -2256,22 +2260,21 @@ header {
 @media screen and (max-width: 1023px) {
   .footer__container-top-wrap {
     gap: 35px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 767px) {
   .footer__container-top-wrap {
     gap: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 }
 .footer__container-top-wrap-item {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 195px;
+  max-width: 185px;
 }
 @media screen and (max-width: 1023px) {
   .footer__container-top-wrap-item {
@@ -2299,9 +2302,14 @@ header {
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer__container-top-wrap-item .contacts {
+  max-width: 195px;
 }
 .footer__container-top-wrap-item .contacts span {
   text-transform: none;
+  margin-bottom: 0;
 }
 .footer__container-top-wrap-item .contacts a {
   color: #283441;
