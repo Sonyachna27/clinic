@@ -1,13 +1,5 @@
 .blog{
-    padding: 60px 0;
-      margin-bottom: 120px;
-      @media screen and (max-width:767px) {
-        margin-bottom: 60px;
-        padding: 30px 0;
-      }
-      @media screen and (max-width:367px) {
-        margin-bottom: 30px;
-      }
+   
     .page-main-blog & {
       padding: 0;
     }  
