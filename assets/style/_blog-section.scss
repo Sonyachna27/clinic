@@ -27,9 +27,6 @@
         }
         & a {
           margin-bottom: 10px;
-          // &:nth-last-of-type(1){
-          //   margin-top: auto;
-          // }
         }
         .swiper-slide {
           flex-shrink: 1;
@@ -156,9 +153,9 @@
   }
 }
 
-.blog__container-top-arrows{
-  @include arrowsWrap;
-}
+// .blog__container-top-arrows{
+//   @include arrowsWrap;
+// }
 
 .blog-swiper-pagination {
     width: 150px;
