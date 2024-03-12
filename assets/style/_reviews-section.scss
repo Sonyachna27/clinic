@@ -191,9 +191,7 @@
         }
     }
 }
-.reviews__container-top-arrows{
-    @include arrowsWrap;
-  }
+
 .reviews__container-top-arrow-next::after,
   .reviews__container-top-arrow-prev::after{
   content: none;
